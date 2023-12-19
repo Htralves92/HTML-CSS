@@ -1,0 +1,177 @@
+Formulário
+
+1) abrir um Formulário
+para cada campo, usar input: text
+
+2) para enviar : input: submit
+
+3) Retirar preenchimento automático:
+Dentro do campo <form>, colocar autocomplete= off
+
+4) para que o botam Enviar envie os dados pra algum lugar:
+tbm dentro de <form> colocar action= cadastro.php
+
+5) label
+envolopar campo nome e outros campos: selecionar o nome do campo; CTRL+SHITF+P ; digitar label; apertar enter. digitar i+o nome do campo (ex: inome). Renomear o campo id com o mesmo nome colocado no label (nesse caso, inome tbm)
+
+6) Metoh GET e POST (GET os dados do formulário aparecem na URL e permitem apenas 3 mil caracteres. POST oculta os dados na URL- utilizar o POST).  Para maior segurança, usar HTTPS.
+
+exemplo:
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php" method="POST" autocomplete="on">
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+        <p> <label for="isobrenome">Sobrenome</label>: <input type="text" name="Sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+
+7) minlength / maxlength --> quantidade mínima e máxima de digitos naquele campo.
+
+8) size --> quantidade de caracteres que a caixa irá mostrar
+
+9) placeholder mostra o que a pessoa tem que digitar naquele campo ( ex: nome de usuário / Senha com mínimo de 8 dígitos)- a frase fica escrita dentro da caixa de texto.
+
+10) identificar a caixa
+    a. primeiro colocar autocomplete "on" no form;
+    b. colocar autocomplete dentro da caixa, dentro do input; em seguida, escolher do que se trata aquela caixa.
+
+    <body>
+        <h1> Teste de formulário</h1>
+        <form action="cadastro.php" method="post">
+            <p>
+                <label for="iusu">Usuário:</label>
+                <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="30" placeholder="digite o nome do usuário" autocomplete="username">
+             </p>
+             <p>
+                <label for="isen">Senha:</label>
+                <input type="password" name="sen " id="isen" required minlength="6" autocomplete="current-password" placeholder="digite sua senha atual">
+             </p>
+             <p> <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+    
+        </form>
+
+11) para usar uma caixa com números
+<label for="imedia">Média</label>
+<input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5" required>
+
+12) Exemplos
+<h1>Teste de Formulário</h1>
+<form action="cadastro.php" method="get" autocomplete="on">
+    <fieldset>
+        <legend>Dados pessoais</legend>
+        <p>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="nome completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5" required>
+        </p>
+        <p><label for="imes">Período letivo</label>
+            <input type="month" name="mes" id="imes">
+        </p>
+        <p>
+            <label for="idia">Dia da Prova</label>
+            <input type="date" name="Dia" id="idia" value="2023-12-13">
+        </p>
+         <p>
+        <label for="ihora ">Hora:</label>
+        <input type="time" name="Hora" id="ihora" value="07:00">
+               </p>
+              <p>
+            <label for="itel">Telefone:</label>
+            <input type="tel" name="tel" id="itel" placeholder=" (xx) xxxxx-xxxx" autocomplete="tel" >
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </fieldset>
+Para envelopar o fieldset, basta selecionar toda a parte que quer colocar dentro do campo, depois apertar CTRL+P e selecionar a primeira opção "Envolver com abreviação", depois digitar fieldset e dar enter.
+13) Todo campo radio tem que ter o mesmo name
+    <input type="radio" name="sexo" id="isxms">
+    <label for="isxms">Masculino</label> <br>
+    <input type="radio" name="sexo" id="isxfm">
+    <label for="isxfm">Feminino</label>
+
+14) modelo
+<body>
+    <h1>Consulta de Paciente    </h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Qual hospital a Sra. está atendendo?</legend>
+            <p>
+                <input type="radio" name="hospital" id="ihgebel">
+                <label for="ihgebel">HGeBelém</label>
+                <br>
+
+                <input type="radio" name="hospital" id="ipd">
+                <label for="ipd">Porto Dias</label>
+                
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Dados pessoais do paciente</legend>
+                       <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required maxlength="30" placeholder="nome completo" autocomplete="name">
+            </p>
+            <p>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5" required>
+            </p>
+            <p><label for="imes">Período letivo</label>
+                <input type="month" name="mes" id="imes">
+            </p>
+            <p>
+                <label for="idia">Dia da Prova</label>
+                <input type="date" name="Dia" id="idia" value="2023-12-13">
+            </p>
+             <p>
+            <label for="ihora ">Hora:</label>
+            <input type="time" name="Hora" id="ihora" value="07:00">
+                   </p>
+                  <p>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" placeholder=" (xx) xxxxx-xxxx" autocomplete="tel" >
+            </p>
+           
+           
+        </fieldset>
+        <fieldset>
+            <legend>Sexo</legend>
+            <p>
+                <input type="radio" name="sexo" id="isxms">
+                <label for="isxms">Masculino</label> <br>
+                <input type="radio" name="sexo" id="isxfm">
+                <label for="isxfm">Feminino</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <p>
+                <input type="checkbox" name="ibas" id="ibas">
+                <label for="ibas">Basquete</label><br>
+                
+                <input type="checkbox" name="ivolei" id="ivolei">
+                <label for="ivolei">Volei</label><br>
+
+                <input type="checkbox" name="inata" id="inata">
+                <label for="inata">Natação</label><br>
+
+                <input type="checkbox" name="ifut" id="ifut">
+                <label for="ifut">Futebol</label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+
+    </form>
+</body>
+</html>

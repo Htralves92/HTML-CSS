@@ -1,0 +1,100 @@
+Comandos HTML
+
+1) Texto como link externo
+Seleciona o texto; CTRL +SHIFT + P; digita "a"; enter; digita "a" novamente
+NO CÓDIGO DE link- para que o link abra em outra aba, colocar "target=blank" e "rel=external"
+a href=" ESCREVER O LINK AQUI" target="_blank" rel="external"
+
+<a href="http://www.g1.com.br" target="_blank" rel="external"
+>Manual de Perícias Médicas do Exército Brasileiro</a>
+
+2) LINK INTERNO (ligar a outra página dentro do nosso site)
+    Se for para páginas salvas em pastas diferentes
+<a href="../nome do arquivo">clique aqui</a>
+Os dois pontos idicam, na linguagem linux, voltar duas páginas. Em seguida basta dar CTRL+espaço e clica na pasta/ arquivo 
+
+3) Adicionar imagem
+img + enter 
+<img src="digitar nome da imagem salva" alt="digitar descrição da imagem">
+
+4) Pegar parte do texto e colocar como parágrafo
+    Seleciona o texto; CTRL +SHIFT + P; digita "p"; enter; digita "p"
+
+5) DOWNLOAD DE arquivo
+<a href="o-caminho-do-seu-arquivo" download="seu-arquivo.pdf" type="application/pdf">SEU TEXTO AQUI!</a>
+
+
+6)  imagem dinâmica
+Salvar as imagens em 3 tamanhos: 1000; 700 e 300 (escrever a ordem de baixo pra cima)
+<picture>
+    <source media="(max-width: 750px)" srcset="caminho_da_imagem/sua_imagem.png" type="image/png">
+    <source media="(max-width: 1050px)" srcset="caminho_da_imagem/sua_imagem.png" type="image/png">
+        <img src="caminho_da_imagem/sua_imagem.png" alt="imagem flexivel">
+
+</picture>
+
+7) FUNDO EM GRADIENTE (COLOCAR DENTRO DO HEAD) 
+<style>
+    * {
+      height: 100%;
+    }
+
+      body {
+              background-image: linear-gradient(to bottom, #2292A8,#2F6A75,#00B8DB, #3A77B8);
+              background-attachment: fixed;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0;
+      }
+  </style>
+
+
+8) ajuste do texto
+  <style>
+body {
+     font: normal 16px Arial, Verdana, serif;
+     text-align: left;
+        }
+
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: right;
+}
+p {
+    text-align: justify;
+    text-indent: 30px (/* para colocar o espaço em cada parágrafo);*/
+    }
+  </style>
+
+
+9) Ajustar caixa do texto
+width --> centralizar o texto dentro da tela, sem ocupar a largura inteira (600px)
+padding --> espaço da ultima letra até a caixa (10px)
+margin --> ajusta a caixa quando aumenta ou diminui a tela
+
+10) Selecionar uma parte importante com importante com id   
+    <h1 id="principal"></h1>
+
+11) criar um style
+digitar link e escolher link:css 
+criar o arquivo. Abrir o arquivo e digitar na primeira linha @charset "UT-8"
+
+12) partes do site
+  <header></header> - cabeçalho
+    <nav></nav> - menu com links no cabeçalho
+  <main></main> parte principal
+  <footer></footer> rodapé
+
+13) nav > a 
+text-decoration: none 
+color: white
+font-weight: bold 
+
+14) nav > a:hover (quando passar o mouse por cima)
+text-decoration: underline
+margin-right: 30px
+
+

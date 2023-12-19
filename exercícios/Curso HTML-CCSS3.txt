@@ -1,0 +1,3 @@
+Curso HTML-CCSS3
+área head é área de configuração do site
+body é o conteúdo

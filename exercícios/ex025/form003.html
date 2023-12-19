@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Consulta de Paciente    </h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Qual hospital a Sra. está atendendo?</legend>
+            <p>
+                <input type="radio" name="hospital" id="ihgebel">
+                <label for="ihgebel">HGeBelém</label>
+                <br>
+
+                <input type="radio" name="hospital" id="ipd">
+                <label for="ipd">Porto Dias</label>
+                
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Dados pessoais do paciente</legend>
+                       <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required maxlength="30" placeholder="nome completo" autocomplete="name">
+            </p>
+            <p>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5" required>
+            </p>
+            <p><label for="imes">Período letivo</label>
+                <input type="month" name="mes" id="imes">
+            </p>
+            <p>
+                <label for="idia">Dia da Prova</label>
+                <input type="date" name="Dia" id="idia" value="2023-12-13">
+            </p>
+             <p>
+            <label for="ihora ">Hora:</label>
+            <input type="time" name="Hora" id="ihora" value="07:00">
+                   </p>
+                  <p>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" placeholder=" (xx) xxxxx-xxxx" autocomplete="tel" >
+            </p>
+           
+           
+        </fieldset>
+        <fieldset>
+            <legend>Sexo</legend>
+            <p>
+                <input type="radio" name="sexo" id="isxms">
+                <label for="isxms">Masculino</label> <br>
+                <input type="radio" name="sexo" id="isxfm">
+                <label for="isxfm">Feminino</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <p>
+                <input type="checkbox" name="ibas" id="ibas">
+                <label for="ibas">Basquete</label><br>
+                
+                <input type="checkbox" name="ivolei" id="ivolei">
+                <label for="ivolei">Volei</label><br>
+
+                <input type="checkbox" name="inata" id="inata">
+                <label for="inata">Natação</label><br>
+
+                <input type="checkbox" name="ifut" id="ifut">
+                <label for="ifut">Futebol</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Data de nascimento</legend>
+            <p>
+                <input type="date" name="idn" id="idn">
+                <label for="idn"></label>
+            </p>
+
+            <p>
+                <label for="iidade">A idade do paciente é:</label>
+                <output id="iidade">0</output>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+
+    </form>
+    
+     
+</body>
+</html>
